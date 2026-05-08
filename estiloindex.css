@@ -1,5 +1,5 @@
 html {
-  background-color: #ABC8DE;
+  background-color: #D65F47;
   font-family: "Open Sans", sans-serif;
   margin: 0; padding: 0; 
   box-sizing: border-box;
@@ -8,7 +8,7 @@ html {
 body {
 width: 70%;
 margin: 0 auto;
-background-color: #ECECEC;
+background-color: #47D6CA;
 padding: 0 15px 15px 15px; 
 border: 5px solid black;
 }
