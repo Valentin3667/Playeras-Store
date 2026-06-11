@@ -1,67 +1,140 @@
-html {
-  background-color: #FFFFFF;
-  font-family: "Open Sans", sans-serif;
-  margin: 0; padding: 0; 
-  box-sizing: border-box;
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL Y PALETA
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-width: 70%;
-margin: 0 auto;
-background-color: #255255255;
-padding: 0 15px 15px 15px; 
-border: 5px solid black;
+    background-color: #f4f7f6; /* Blanco grisáceo para el fondo general */
+    color: #333333; /* Texto principal oscuro */
+    line-height: 1.6;
 }
 
-h1 { 
-text-align: center; 
-margin: 0; 
-padding: 10px 0; 
-color: #0255255;
-
-p{ 
- color: blue;
-}	
-li{
-  color: blue;
- }
-}
-@media only screen and(max-width:400px){
-h1 {
-  font-size: 2vw;
-  text-aling: center;
-  margin:0;
-  padding: 10px 0;
-  color: LightBlue;
-  text-shadow: 3px 3px 1px black;
+/* ==========================================
+   2. ENCABEZADO Y NAVEGACIÓN (Header)
+   ========================================== */
+/* Contenedor principal del menú (Primer div) */
+body > div:first-of-type {
+    background-color: #0d2c54; /* Azul oscuro elegante */
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 4px solid #ff6b35; /* Línea naranja de acento */
 }
 
-p{
-   font-size: 1vw;
- }
-
-li {
-    font-size: 1vw;
- }
+body > div:first-of-type h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-@media only screen and(min-width:401px) and (max-width:1980px){
-h1 {
-  font-size: 5vw;
-  text-aling: center;
-  margin:0;
-  padding: 20px 0;
-  color: Honeydew;
-  text-shadow: 3px 3px 1px black;
+body > div:first-of-type img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+    border: 2px solid #ffffff;
 }
 
-p{
-   font-size: 3vw;
- }
-
-li {
-    font-size: 3vw;
- }
+/* Lista de navegación */
+body > div:first-of-type ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
 }
-  
 
+body > div:first-of-type ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto Hover en el menú */
+body > div:first-of-type ul li a:hover {
+    background-color: #ff6b35; /* Fondo Naranja al pasar el mouse */
+    color: #ffffff;
+}
+
+/* ==========================================
+   3. CONTENIDO PRINCIPAL (Secciones)
+   ========================================== */
+/* Contenedor de información (Segundo div) */
+body > div:nth-of-type(2) {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff; /* Fondo blanco para destacar el producto */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #0d2c54; /* Detalle en azul */
+}
+
+body > div:nth-of-type(2) h2 {
+    color: #0d2c54;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+body > div:nth-of-type(2) p {
+    font-size: 1.1rem;
+    color: #555555;
+}
+
+/* ==========================================
+   4. BOTONES Y ELEMENTOS DE ACCIÓN
+   ========================================== */
+/* Reemplazo de tu .testbtn anterior con los colores de la tienda */
+.testbtn {
+    background-color: #ff6b35; /* Naranja llamativo (Llamado a la acción) */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 25px; /* Bordes más redondeados y modernos */
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; /* Centrado */
+    box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.testbtn:hover {
+    background-color: #e0531a; /* Naranja más oscuro al presionar */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Elementos extra (Iframe) */
+iframe {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   5. PIE DE PÁGINA (Footer)
+   ========================================== */
+/* Tercer div (Derechos reservados) */
+body > div:nth-of-type(3) {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
