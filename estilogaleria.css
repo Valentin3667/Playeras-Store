@@ -1,25 +1,52 @@
+/* ==========================================
+   CONFIGURACIÓN DE LA GALERÍA (Tonos Azules, Naranjas y Blancos)
+   ========================================== */
+
+/* Contenedor principal de la galería */
 div.gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center; /* Centra los productos para que se vea más ordenado */
+  gap: 20px;               /* Añade un espacio uniforme entre tarjetas */
+  padding: 30px 15px;
+  background-color: #f4f7f6; /* Fondo claro de la tienda */
 }
 
+/* Tarjeta de cada luchador/playera */
 div.gallery-item {
-  margin: 5px;
-  border: 1px solid #ccc;
-  width: 180px;
+  background-color: #ffffff; /* Fondo blanco para resaltar el producto */
+  border: 2px solid #e0e0e0;  /* Borde gris suave inicial */
+  border-radius: 8px;        /* Esquinas redondeadas modernas */
+  width: 200px;              /* Un poco más amplia para mejor visualización */
+  overflow: hidden;          /* Mantiene la imagen dentro de los bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efecto al pasar el cursor sobre la tarjeta */
 div.gallery-item:hover {
-  border: 1px solid #777;
+  border-color: #ff6b35;     /* El borde cambia al naranja de la tienda */
+  transform: translateY(-5px); /* Efecto de elevación sutil */
+  box-shadow: 0 8px 16px rgba(255, 107, 53, 0.2); /* Sombra naranja difuminada */
 }
 
+/* Ajustes para las imágenes */
 div.gallery-item img {
   width: 100%;
-  height: auto;
+  height: 220px;             /* Altura fija para que todas las tarjetas midan lo mismo */
+  object-fit: cover;         /* Evita que las fotos se distorsionen si varían de tamaño */
+  display: block;
+  border-bottom: 1px solid #eee;
 }
 
+/* Caja de texto (Nombre del luchador) */
 div.gallery-item div.desc {
-  padding: 15px;
+  padding: 15px 10px;
   text-align: center;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-weight: bold;
+  color: #0d2c54;            /* Texto en azul oscuro */
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  background-color: #ffffff;
 }
