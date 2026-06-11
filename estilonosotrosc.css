@@ -1,35 +1,112 @@
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================== */
 * {
-  padding: 2px;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  font-family: Open Sans, Helvetica, sans-serif;
+    background-color: #f4f7f6; /* Fondo gris claro general */
+    color: #333333;
+    line-height: 1.7;
 }
 
+/* ==========================================
+   2. ENCABEZADO Y NAVEGACIÓN (Idéntico al Inicio)
+   ========================================== */
 #encabezado {
-  background-color: #A19CAD;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-  height: auto;
+    background-color: #0d2c54; /* Azul oscuro */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #ff6b35; /* Línea de acento naranja */
 }
 
+#encabezado h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Lista de navegación */
 .navbar {
-        margin: 0 px;
-        padding: 0 px;
-        text-align: left;
-        font-size: 18px;
-        list-style-type:none;
-        height: auto;
-        background-color: #C2BFCA;
-        }
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.navbar li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto Hover en el menú */
+.navbar li a:hover {
+    background-color: #ff6b35; /* Fondo Naranja al pasar el mouse */
+    color: #ffffff;
+}
+
+/* ==========================================
+   3. CONTENIDO PRINCIPAL (Nosotros)
+   ========================================== */
+#pagina {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
 #columna_principal {
-  float: left;
-  width: 70%;
-  height: 700px;
-  background-color: #FFFFFF;
+    background-color: #ffffff; /* Tarjeta blanca contenedora */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #0d2c54; /* Detalle lateral en azul */
 }
 
+/* Títulos (Nosotros y Misión) */
+#columna_principal h2 {
+    color: #0d2c54; /* Azul oscuro */
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
 
+#columna_principal h3 {
+    color: #ff6b35; /* Naranja para subtítulos */
+    font-size: 1.6rem;
+    margin: 30px 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Párrafos de texto */
+#columna_principal p {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   4. MULTIMEDIA (Video)
+   ========================================== */
+video {
+    display: block;
+    max-width: 100%; /* Se adapta si se ve en celular */
+    height: auto;
+    margin: 30px auto; /* Centra el video y le da espacio */
+    border: 3px solid #0d2c54; /* Borde azul para el reproductor */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
